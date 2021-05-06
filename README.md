@@ -1,14 +1,9 @@
-## Getting Started
+## Edit Distance
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 
-## Folder Structure
+You have the following three operations permitted on a word:
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+- Insert a character
+- Delete a character
+- Replace a character
