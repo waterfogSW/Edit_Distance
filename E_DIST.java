@@ -1,23 +1,32 @@
-import java.util.Scanner;
-
 public class E_DIST {
-    static int min(int x, int y, int z) {
-        if(x <= y && x <= z)
-            return x;
-        if(y <= x && y <= z)
-            return y;
-        else
-            return z;
-    }
-    static int editDistDP(String str1, String str2, int m, int n) {
-        int cost[][] = new int [m+1][n+1];
+    int m, n;
+    int cost[][];
+    char edit[][];
+    String str1, str2;
 
+    E_DIST(String _str1,String _str2) {
+        m = _str1.length();
+        n = _str2.length();
+        cost = new int [m+1][n+1];      // Minimum Cost
+    }
+
+    private int min(int i, int c, int d) {
+        if(i <= c && i <= d)
+            return i;
+        if(c <= i && c <= d)
+            return c;
+        else
+            return d;
+    }
+
+    public int editDistDP(String str1, String str2) {
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++) {
-                if (i == 0) 
+                if (i == 0)
                     cost[i][j] = j;
                 else if(j == 0)
                     cost[i][j] = i;
+
                 else if (str1.charAt(i - 1) == str2.charAt(j - 1))
                     cost[i][j] = cost[i - 1][j - 1];
 
@@ -27,25 +36,6 @@ public class E_DIST {
                                     cost[i][j - 1] + 1);
             }
         }
-        System.out.println("----------");
-        for (int i = 0; i < cost.length; i++) {
-            for (int j = 0; j < cost[i].length; j++) {
-                System.out.print(cost[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println("----------");
         return cost[m][n];
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("String 1  : ");
-        String str1 = sc.nextLine();
-        System.out.print("String 2  : ");
-        String str2 = sc.nextLine();
-        sc.close();
-
-        System.out.println("Min cost : " + 
-            editDistDP(str1, str2, str1.length(), str2.length()));
     }
 }
