@@ -1,7 +1,6 @@
 public class E_DIST {
     int m, n;
     int cost[][];
-    char edit[][];
     String str1, str2;
 
     E_DIST(String _str1,String _str2) {
