@@ -18,16 +18,5 @@ public class E_DIST_TEST {
             }
             System.out.println();
         }
-        System.out.println("----------");
-        for (int i = 0; i < E.edit.length; i++) {
-            for (int j = 0; j < E.edit[i].length; j++) {
-                System.out.print(E.edit[i][j] + " ");
-            }
-            System.out.println();
-        }
-        char order[] = E.optOrder();
-        for (int i = 0; i < order.length; i++) {
-            System.out.print(order[i]);
-        }
     }
 }
