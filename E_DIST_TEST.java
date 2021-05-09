@@ -34,5 +34,12 @@ public class E_DIST_TEST {
             System.out.print(order[i] + "->");
         }
         System.out.println(order[order.length-1]);
+
+        String s_order[] = E.orderApply(order);
+        System.out.print("Edit Order : ");
+        for (int i = 0; i < s_order.length - 1; i++) {
+            System.out.print(s_order[i] + "->");
+        }
+        System.out.println(s_order[s_order.length-1]);
     }
 }

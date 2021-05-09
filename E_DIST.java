@@ -79,4 +79,28 @@ public class E_DIST {
         }
         return order;
     }
+
+    public String[] orderApply(char order[]) {
+        int i = 0, j = 0;
+        String[] orderApply = new String[order.length];
+        for (int k = 0; k < order.length; k++) {
+            String tmp = "";
+            switch (order[k]) {
+                case 'I':
+                    j++; 
+                    break;
+                case 'D':
+                    i++;
+                    break;
+                case 'C':
+                    i++;
+                    j++;
+                    break;
+            }
+            tmp = str2.substring(0,j) + str1.substring(i,str1.length());
+            orderApply[k] = tmp;
+        }
+        return orderApply;
+    }
+
 }
