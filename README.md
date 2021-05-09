@@ -14,3 +14,7 @@ You have the following three operations permitted on a word:
 
 - Input 2 word to get cost of edit
 - Find minimum number of edits (operations) required to convert ‘**String 1**’ into ‘**String 2**’.  
+
+### Example
+
+![image](https://user-images.githubusercontent.com/28651727/117564172-bffd9b00-b0e5-11eb-9b90-1644118740d2.png)
